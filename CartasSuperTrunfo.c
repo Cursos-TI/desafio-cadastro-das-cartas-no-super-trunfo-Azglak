@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//Struct para evitar a criação de variáveis caso o sistema tenha que ser escalado para incluir mais cidades.
 struct Cidade {
     int População;
     float Area;
@@ -12,6 +13,8 @@ struct Cidade {
 int main() {
     struct Cidade cidade1;
     struct Cidade cidade2;
+
+    //Cadastro das duas cidades.
     
     printf("Olá, bem-vindo ao Super Trunfo Cidades!\nPor favor, insira os dados da primeira cidade.\n");
     printf("Nome:\n");
@@ -42,6 +45,8 @@ int main() {
     scanf("%f", &cidade2.PIB);
     printf("Número de pontos turísticos:\n");
     scanf("%d", &cidade2.NPTuristicos);
+
+//Texto de revisão do que foi cadastrado.
     
     printf("%s é o lar de %d pessoas, tem %f de área, %f de PIB e possui %d pontos turísticos, além de possuir %f de densidade demográfica e %f de PIB per capta!\n", cidade1.Nome, cidade1.População, cidade1.Area, cidade1.PIB, cidade1.NPTuristicos, cidade1.População/cidade1.Area, cidade1.PIB/cidade1.População);
     
